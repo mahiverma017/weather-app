@@ -1,0 +1,38 @@
+.InfoBox{
+    text-align: center;
+    margin: 20px 36px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#cityName{
+    color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+.showBtn {
+    justify-content: center;
+}
+
+.moreInfo{
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 11px;
+}
+
+.temp {
+    margin: 14px 0;
+}
+
+h2 {
+    color: rgba(0, 0, 0, 0.6);
+    padding: 24px 0 18px 0;
+    font-size: 22px;
+}

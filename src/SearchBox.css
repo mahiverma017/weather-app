@@ -1,0 +1,31 @@
+.SearchBox {
+    margin: 66px 40px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#city {
+    width: 280px;
+}
+
+.error {
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.title{
+    font-size: 30px;
+}
+
+.temp{
+    margin: 3px 0;
+    /* font-size: 12px; */
+}
+
