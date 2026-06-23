@@ -1,16 +1,74 @@
-# React + Vite
+# 🌦️ Weather Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple weather application built using React and Material UI. This project was created as a beginner-level web development project to learn React, API integration, state management, and responsive UI design.
 
-Currently, two official plugins are available:
+## 📖 About the Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Weather Overview allows users to search for any city and view its current weather conditions. The application fetches real-time weather data from the OpenWeatherMap API and displays important weather details in a clean and user-friendly interface.
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Search weather by city name
+* View current temperature
+* Check minimum and maximum temperature
+* View humidity levels
+* Check wind speed
+* View weather description
+* Error message for invalid city names
+* Responsive and modern UI using Material UI
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React.js
+* Material UI (MUI)
+* JavaScript
+* CSS
+* OpenWeatherMap API
+
+## 📂 Project Structure
+
+```bash
+src/
+├── App.js
+├── WeatherApp.js
+├── SearchBox.js
+├── InfoBox.js
+├── App.css
+├── SearchBox.css
+└── InfoBox.css
+```
+
+## 🔑 API Used
+
+This project uses the OpenWeatherMap API to fetch real-time weather information.
+
+Website: https://openweathermap.org/
+
+## 📚 What I Learned
+
+Through this project, I learned:
+
+* React functional components
+* React Hooks (useState)
+* API fetching using fetch()
+* Handling user input and forms
+* Error handling
+* Component-based architecture
+* Material UI components and styling
+
+## 🎯 Future Improvements
+
+* Add weather icons
+* Add 5-day weather forecast
+* Add dark mode
+* Add current location weather
+* Improve UI and animations
+
+## 👨‍💻 Author
+
+**Mahi Verma**
+
+B.Tech (Computer Science & Engineering)
+
+Beginner React Project
+
