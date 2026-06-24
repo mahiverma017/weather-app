@@ -1,6 +1,7 @@
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import ThunderstormIcon from '@mui/icons-material/Thunderstorm';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
+import CloudIcon from '@mui/icons-material/Cloud';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -18,9 +19,26 @@ export default function InfoBox({ info }) {
     const HOT_URL = "https://png.pngtree.com/thumb_back/fh260/background/20240718/pngtree-sun-on-the-background-of-a-blue-sky-with-white-clouds-image_15888557.jpg";
     const COLD_URL = "https://www.climaterealityproject.org/sites/default/files/styles/intro_title_impact_small_never_crop/public/adam-chang-iwenq-4jhqo-unsplash.jpg?itok=hYswWfUO";
     const RAINY_URL = "https://img.pikbest.com/backgrounds/20250128/dark-rainy-stormy-cloud-with-lightning-and-rain_11464750.jpg!w700wp";
+    const CLOUDY_URL = "https://media.istockphoto.com/id/462881839/photo/epic-super-cell-storm-cloud.jpg?s=612x612&w=0&k=20&c=66lBv3Ybh1b4cNhAyQaRwekC7fpgr2vg8Er49HWyDr4=";
 
     let showMoreInfo = () => {
         setShowMore(!showMore);
+    }
+
+    const weatherCondition = info.weather.toLowerCase();
+    let imageUrl, icon;
+    if (weatherCondition.includes("rain") || weatherCondition.includes("drizzle") || weatherCondition.includes("thunderstorm")  || weatherCondition.includes("broken clouds")) {
+        imageUrl = RAINY_URL;
+        icon = <ThunderstormIcon/>;
+    } else if (weatherCondition.includes("cloud")) {
+        imageUrl = CLOUDY_URL;
+        icon = <CloudIcon/>;
+    } else if (weatherCondition.includes("snow")) {
+        imageUrl = COLD_URL;
+        icon = <AcUnitIcon/>;
+    } else {
+        imageUrl = info.temp > 15 ? HOT_URL : COLD_URL;
+        icon = info.temp > 15 ? <WbSunnyIcon/> : <AcUnitIcon/>;
     }
 
     let date = new Date().toString().split(" ").slice(0, 4);
@@ -33,12 +51,12 @@ export default function InfoBox({ info }) {
                 <Card sx={{ maxWidth: 400 }}>
                     <CardMedia
                         sx={{ height: 160 }}
-                        image={info.humidity > 80 ? RAINY_URL : info.temp > 15 ? HOT_URL : COLD_URL}
-                        title="green iguana"
+                        image={imageUrl}
+                        title="weather"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div" id='cityName'>
-                            {info.city}{info.humidity > 80 ? <ThunderstormIcon /> : info.temp > 15 ? <WbSunnyIcon /> : <AcUnitIcon />}
+                            {info.city} {icon}
                         </Typography>
                         <Typography component="div" variant="body2" sx={{ color: 'text.secondary' }}>
                             <div className='temp'>
